@@ -1148,7 +1148,7 @@ ARTICLE_FOOTER = r'''
   <div class="wrap">
     <div class="footer-bottom" style="border-top:none;padding-top:0;">
       <span>
-        © 2026 Data, Decoded. All figures in this post are illustrative academic examples.
+        © 2026 StreamScope. All figures in this post are illustrative academic examples.
       </span>
       <a href="/" style="font-weight:600;color:var(--teal-deep);">
         Back to homepage →
@@ -1238,6 +1238,7 @@ PAGE_HOME = r'''
 <div class="hero-copy">
 <span class="eyebrow">MUSIC LISTENING ANALYTICS</span>
 <h1>Discover listening patterns. Understand listener segments.</h1>
+<p style="font-size:0.82rem;letter-spacing:0.02em;color:var(--muted-2);margin-top:-4px;">Data, Decoded — project portfolio</p>
 <p class="lede">Case studies that follow real data analytics work end to end — from a messy business question, through statistics and clustering, to a recommendation a team could actually ship.</p>
 <div class="hero-actions">
 <a class="btn btn-primary" href="/article">Read the latest case study</a>
@@ -1402,7 +1403,7 @@ data-search="data analytics life cycle discovery data preparation model planning
 <h3><a href="/article#lifecycle">From Business Question to Action: The Data Analytics Life Cycle</a></h3>
 <p class="card-excerpt">A practical walkthrough of the analytics life cycle — from discovery and data preparation through modelling, communication, and operationalization.</p>
 <div class="card-meta">
-<span>Data, Decoded</span><span class="dot"></span><span>Aug 28, 2026</span><span class="dot"></span><span>8 min read</span>
+<span>StreamScope</span><span class="dot"></span><span>Aug 28, 2026</span><span class="dot"></span><span>8 min read</span>
 </div>
 </div>
 </article>
@@ -1416,7 +1417,7 @@ data-search="data analytics life cycle discovery data preparation model planning
 <h3><a href="/article#descriptive-stats">What the Summary Statistics Reveal About Listening Habits</a></h3>
 <p class="card-excerpt">Start with the basics: means, distributions, and group comparisons that turn raw listener records into a clear statistical picture.</p>
 <div class="card-meta">
-<span>Data, Decoded</span><span class="dot"></span><span>Aug 28, 2026</span><span class="dot"></span><span>7 min read</span>
+<span>StreamScope</span><span class="dot"></span><span>Aug 28, 2026</span><span class="dot"></span><span>7 min read</span>
 </div>
 </div>
 </article>
@@ -1430,7 +1431,7 @@ data-search="data analytics life cycle discovery data preparation model planning
 <h3><a href="/article#hypothesis-testing">Does Subscription Type Really Change Listener Behaviour?</a></h3>
 <p class="card-excerpt">Use hypothesis testing to separate a visible difference from a statistically meaningful one, with a two-sample t-test as the lens.</p>
 <div class="card-meta">
-<span>Data, Decoded</span><span class="dot"></span><span>Aug 28, 2026</span><span class="dot"></span><span>6 min read</span>
+<span>StreamScope</span><span class="dot"></span><span>Aug 28, 2026</span><span class="dot"></span><span>6 min read</span>
 </div>
 </div>
 </article>
@@ -1444,7 +1445,7 @@ data-search="data analytics life cycle discovery data preparation model planning
 <h3><a href="/article#elbow">Choosing the Right Number of Listener Segments</a></h3>
 <p class="card-excerpt">See how the elbow method helps choose a practical K for K-Means instead of selecting the number of clusters by guesswork.</p>
 <div class="card-meta">
-<span>Data, Decoded</span><span class="dot"></span><span>Aug 28, 2026</span><span class="dot"></span><span>6 min read</span>
+<span>StreamScope</span><span class="dot"></span><span>Aug 28, 2026</span><span class="dot"></span><span>6 min read</span>
 </div>
 </div>
 </article>
@@ -1507,7 +1508,7 @@ data-search="data analytics life cycle discovery data preparation model planning
 <h3><a href="/article#recommendations">Turning Listener Segments into Product Strategy</a></h3>
 <p class="card-excerpt">Translate four behavioural segments into practical product, retention, recommendation, and marketing actions — the prescriptive layer of the analysis.</p>
 <div class="card-meta">
-<span>Data, Decoded</span><span class="dot"></span><span>Aug 28, 2026</span><span class="dot"></span><span>7 min read</span>
+<span>StreamScope</span><span class="dot"></span><span>Aug 28, 2026</span><span class="dot"></span><span>7 min read</span>
 </div>
 </div>
 </article>
