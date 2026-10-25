@@ -1,4 +1,4 @@
-"""Data, Decoded — single-file NiceGUI blog application.
+"""StreamScope — single-file NiceGUI music-listening analytics portfolio.
 
 The application keeps the supplied site's visual identity, page content, and
 provided images, while consolidating the web app into one Python entrypoint.
@@ -1021,21 +1021,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   applyFilters();
 
-  document.querySelectorAll('form[data-fake-submit]').forEach(form => {
+  document.querySelectorAll('form[data-email-submit]').forEach(form => {
     form.addEventListener('submit', event => {
       event.preventDefault();
 
+      const formData = new FormData(form);
+      const name = String(formData.get('name') || '').trim();
+      const email = String(formData.get('email') || '').trim();
+      const topic = String(formData.get('topic') || 'General question').trim();
+      const message = String(formData.get('message') || '').trim();
+      const subject = encodeURIComponent('[StreamScope] ' + topic);
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Topic: ' + topic + '\n\n' +
+        message
+      );
+
       const status = form.querySelector('.form-status');
-
       if (status) {
-        status.textContent =
-          form.dataset.successMessage ||
-          'Thanks — that went through.';
-
+        status.textContent = 'Your email app will open with this message prepared. Please send it to complete delivery.';
         status.classList.add('show', 'ok');
       }
 
-      form.reset();
+      window.location.href =
+        'mailto:sailee.gore23@pccoepune.org?subject=' + subject + '&body=' + body;
     });
   });
 
@@ -1083,7 +1093,7 @@ FOOTER = r'''
             <rect x="16" y="2" width="4" height="26" rx="1" fill="#D98F31"/>
             <rect x="23" y="12" width="4" height="16" rx="1" fill="#1F2A44"/>
           </svg>
-          <span>Data, Decoded</span>
+          <span>StreamScope</span>
         </a>
         <p>
           A blog working through real data analytics case studies —
@@ -1122,7 +1132,7 @@ FOOTER = r'''
 
     <div class="footer-bottom">
       <span>
-        © 2026 Data, Decoded. All figures in this post are illustrative academic examples.
+        © 2026 StreamScope. All figures in this post are illustrative academic examples.
       </span>
       <span>
         Built for the Data Analytics &amp; Visualization coursework portfolio.
@@ -1175,7 +1185,7 @@ HEADER_TEMPLATE = r"""
         <rect x="16" y="2" width="4" height="26" rx="1" fill="#D98F31"/>
         <rect x="23" y="12" width="4" height="16" rx="1" fill="#1F2A44"/>
       </svg>
-      <span>Data, Decoded<small>ANALYTICS &amp; VISUALIZATION</small></span>
+      <span>StreamScope<small>MUSIC LISTENING ANALYTICS</small></span>
     </a>
 
     <nav class="main-nav" id="main-nav" aria-label="Primary navigation">
@@ -1226,8 +1236,8 @@ PAGE_HOME = r'''
 <section class="hero">
 <div class="wrap hero-grid">
 <div class="hero-copy">
-<span class="eyebrow">Data Analytics &amp; Visualization</span>
-<h1>Turning raw usage data into decisions worth acting on.</h1>
+<span class="eyebrow">MUSIC LISTENING ANALYTICS</span>
+<h1>Discover listening patterns. Understand listener segments.</h1>
 <p class="lede">Case studies that follow real data analytics work end to end — from a messy business question, through statistics and clustering, to a recommendation a team could actually ship.</p>
 <div class="hero-actions">
 <a class="btn btn-primary" href="/article">Read the latest case study</a>
@@ -1763,7 +1773,7 @@ PAGE_ABOUT = r'''
 <div class="wrap two-col">
 <div>
 <h2>Why this blog exists</h2>
-<p>Most write-ups about data analytics stop at definitions: what descriptive analytics means, what clustering is, why the data analytics life cycle matters in theory. <strong>Data, Decoded</strong> takes a different approach — it starts with a real business question and follows one dataset through the entire process: framing the problem, preparing the data, running the statistics, testing assumptions, building a model, and turning the output into a recommendation someone could actually act on.</p>
+<p>Most write-ups about data analytics stop at definitions: what descriptive analytics means, what clustering is, why the data analytics life cycle matters in theory. <strong>StreamScope</strong> takes a different approach — it starts with a real business question and follows one dataset through the entire process: framing the problem, preparing the data, running the statistics, testing assumptions, building a model, and turning the output into a recommendation someone could actually act on.</p>
 <p>The first case study on this blog, <a href="/article" style="color:var(--teal-deep);font-weight:600;">Decoding the Playlist</a>, walks through how a music-streaming platform's behavioural data can be segmented into four listener types using descriptive statistics, hypothesis testing, and K-Means clustering — and what each type means for product and marketing decisions.</p>
 <h2 style="margin-top:2em;">How each post is built</h2>
 <p>Every case study on this blog follows the same discipline, based on the six-phase data analytics life cycle: Discovery, Data Preparation, Model Planning, Model Building, Communicate Results, and Operationalize. Numbers are shown in full — not just conclusions — so the reasoning is checkable, not just the headline.</p>
@@ -1817,12 +1827,12 @@ PAGE_CONTACT = r'''
 <div class="wrap page-hero">
 <span class="eyebrow">Get in touch</span>
 <h1 style="max-width:20ch;">Say hello, or suggest a dataset.</h1>
-<p class="lede" style="max-width:52ch;margin-top:12px;">Questions about the methodology, a correction, or a case study you'd like to see — this is where it goes.</p>
+<p class="lede" style="max-width:52ch;margin-top:12px;">Questions about the analysis, dataset suggestions, or feedback on the case study? Get in touch with Sailee.</p>
 </div>
 <section>
 <div class="wrap two-col">
 <div>
-<form class="contact-form" data-fake-submit="" data-success-message="Thanks — your message has been noted.">
+<form class="contact-form" data-email-submit="">
 <div class="field">
 <label for="name">Name</label>
 <input id="name" name="name" placeholder="Your full name" required="" type="text"/>
@@ -1855,7 +1865,7 @@ PAGE_CONTACT = r'''
 </div>
 <div>
 <h5>Email</h5>
-<p>Use the form and a message will reach the author directly.</p>
+<p><a href="mailto:sailee.gore23@pccoepune.org">sailee.gore23@pccoepune.org</a></p>
 </div>
 </div>
 <div class="contact-info-item">
@@ -1863,8 +1873,8 @@ PAGE_CONTACT = r'''
 <svg fill="none" height="17" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="17"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
 </div>
 <div>
-<h5>Response time</h5>
-<p>This is a coursework portfolio blog updated periodically, so replies may take a few days.</p>
+<h5>Phone</h5>
+<p><a href="tel:+919689024423">+91 96890 24423</a></p>
 </div>
 </div>
 <div class="contact-info-item" style="border-bottom:none;">
@@ -1872,8 +1882,8 @@ PAGE_CONTACT = r'''
 <svg fill="none" height="17" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="17"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
 </div>
 <div>
-<h5>Best for</h5>
-<p>Dataset suggestions, methodology questions, and corrections on the published case study.</p>
+<h5>Contact</h5>
+<p>Sailee Dilip Gore</p>
 </div>
 </div>
 </div>
@@ -1996,7 +2006,7 @@ def main() -> None:
     ui.run(
         host="0.0.0.0",
         port=port,
-        title="Data, Decoded",
+        title="StreamScope | Music Listening Analytics",
         reload=False,
     )
 
