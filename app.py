@@ -1,14 +1,4 @@
-"""StreamScope — single-file NiceGUI music-listening analytics portfolio.
 
-The application keeps the supplied site's visual identity, page content, and
-provided images, while consolidating the web app into one Python entrypoint.
-
-Install:
-    python -m pip install nicegui
-
-Run:
-    python app.py
-"""
 
 from __future__ import annotations
 

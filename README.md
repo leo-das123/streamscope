@@ -1,4 +1,4 @@
-# StreamScope — Music Listening Analytics
+﻿# StreamScope â€” Music Listening Analytics
 
 A responsive editorial-style data analytics blog built as a **single-file NiceGUI application**. The project presents analytical case studies through descriptive statistics, hypothesis testing, clustering, visualization, and business recommendations.
 
@@ -12,7 +12,7 @@ A responsive editorial-style data analytics blog built as a **single-file NiceGU
 **Deployment platform:** Render Web Service. The live public URL is assigned by Render and is available in the service dashboard.
 
 **GitHub repository:**  
-https://github.com/leo-das123/data-decoded-blog
+https://github.com/leo-das123/streamscope
 
 ## Overview
 
@@ -22,23 +22,23 @@ The site follows an end-to-end analytics narrative:
 
 ```text
 Business Question
-       ↓
+       â†“
 Data Preparation
-       ↓
+       â†“
 Descriptive Statistics
-       ↓
+       â†“
 Hypothesis Testing
-       ↓
+       â†“
 Clustering
-       ↓
+       â†“
 Visualization
-       ↓
+       â†“
 Business Insights
-       ↓
+       â†“
 Recommendations
 ```
 
-The main case study, **“Decoding the Playlist: How Data Analytics Reveals the Way We Really Listen to Music”**, examines listener behaviour and uses a simulated music-streaming dataset to demonstrate how analytics can uncover meaningful listener segments.
+The main case study, **â€œDecoding the Playlist: How Data Analytics Reveals the Way We Really Listen to Musicâ€**, examines listener behaviour and uses a simulated music-streaming dataset to demonstrate how analytics can uncover meaningful listener segments.
 
 ## Key Features
 
@@ -124,19 +124,19 @@ The current NiceGUI application defines these routes:
 ## Project Structure
 
 ```text
-data-decoded-blog/
-│
-├── app.py
-├── requirements.txt
-├── .gitignore
-│
-└── assets/
-    └── images/
-        ├── image1.png
-        ├── image2.png
-        ├── image3.png
-        ├── image4.png
-        └── image5.png
+streamscope/
+â”‚
+â”œâ”€â”€ app.py
+â”œâ”€â”€ requirements.txt
+â”œâ”€â”€ .gitignore
+â”‚
+â””â”€â”€ assets/
+    â””â”€â”€ images/
+        â”œâ”€â”€ image1.png
+        â”œâ”€â”€ image2.png
+        â”œâ”€â”€ image3.png
+        â”œâ”€â”€ image4.png
+        â””â”€â”€ image5.png
 ```
 
 ### Important architecture note
@@ -213,8 +213,8 @@ nicegui
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/leo-das123/data-decoded-blog.git
-cd data-decoded-blog
+git clone https://github.com/leo-das123/streamscope.git
+cd streamscope
 ```
 
 ### 2. Create a virtual environment
@@ -286,7 +286,7 @@ git push
 The local `main` branch is connected to:
 
 ```text
-https://github.com/leo-das123/data-decoded-blog
+https://github.com/leo-das123/streamscope
 ```
 
 ## Asset Handling
@@ -297,7 +297,7 @@ The primary project layout is:
 
 ```text
 assets/
-└── images/
+â””â”€â”€ images/
 ```
 
 The available chart assets are:
@@ -337,18 +337,18 @@ Current category mapping includes a dedicated Business Strategy card:
 
 ```text
 Analytics Life Cycle
-    → lifecycle post
+    â†’ lifecycle post
 
 Statistical Methods
-    → summary statistics post
-    → hypothesis testing post
+    â†’ summary statistics post
+    â†’ hypothesis testing post
 
 Clustering & ML
-    → elbow-method post
-    → Decoding the Playlist post
+    â†’ elbow-method post
+    â†’ Decoding the Playlist post
 
 Business Strategy
-    → Turning Listener Segments into Product Strategy
+    â†’ Turning Listener Segments into Product Strategy
 ```
 
 ## Business Strategy Section
@@ -384,9 +384,9 @@ Charts, statistical tables, explanatory text, and recommendations are presented 
 The layout adapts across:
 
 ```text
-Desktop → 3-column blog grid
-Tablet  → 2-column blog grid
-Mobile  → 1-column blog grid
+Desktop â†’ 3-column blog grid
+Tablet  â†’ 2-column blog grid
+Mobile  â†’ 1-column blog grid
 ```
 
 Navigation becomes a mobile drawer on smaller screens.
@@ -421,18 +421,18 @@ When editing the application, the main areas are:
 
 ```text
 app.py
-│
-├── PATHS / CONFIGURATION
-├── CSS
-├── JS
-├── SHARED PAGE SHELL
-├── PAGE_HOME
-├── PAGE_BLOG
-├── PAGE_ARTICLE
-├── PAGE_ABOUT
-├── PAGE_CONTACT
-├── ROUTES
-└── main()
+â”‚
+â”œâ”€â”€ PATHS / CONFIGURATION
+â”œâ”€â”€ CSS
+â”œâ”€â”€ JS
+â”œâ”€â”€ SHARED PAGE SHELL
+â”œâ”€â”€ PAGE_HOME
+â”œâ”€â”€ PAGE_BLOG
+â”œâ”€â”€ PAGE_ARTICLE
+â”œâ”€â”€ PAGE_ABOUT
+â”œâ”€â”€ PAGE_CONTACT
+â”œâ”€â”€ ROUTES
+â””â”€â”€ main()
 ```
 
 For content changes, edit the relevant `PAGE_*` section instead of duplicating page templates.
@@ -445,19 +445,19 @@ The current case study uses illustrative/simulated analytical data rather than a
 
 ```text
 Question
-  ↓
+  â†“
 Data
-  ↓
+  â†“
 Statistics
-  ↓
+  â†“
 Testing
-  ↓
+  â†“
 Clustering
-  ↓
+  â†“
 Visualization
-  ↓
+  â†“
 Business Interpretation
-  ↓
+  â†“
 Recommendation
 ```
 
@@ -480,7 +480,7 @@ Potential next improvements include:
 
 **StreamScope** is presented as a Data Analytics & Visualization coursework portfolio.
 
-The featured **“Decoding the Playlist”** case study applies the data analytics life cycle, statistical testing, and K-Means clustering to a simulated music-streaming dataset and connects the analytical findings to plausible product and marketing decisions.
+The featured **â€œDecoding the Playlistâ€** case study applies the data analytics life cycle, statistical testing, and K-Means clustering to a simulated music-streaming dataset and connects the analytical findings to plausible product and marketing decisions.
 
 ## License
 
@@ -493,8 +493,8 @@ Before reusing any included third-party assets, fonts, content, or external reso
 ## Quick Start
 
 ```powershell
-git clone https://github.com/leo-das123/data-decoded-blog.git
-cd data-decoded-blog
+git clone https://github.com/leo-das123/streamscope.git
+cd streamscope
 
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
@@ -511,8 +511,9 @@ http://127.0.0.1:8080
 
 ---
 
-**StreamScope — Music Listening Analytics**
+**StreamScope â€” Music Listening Analytics**
 
 Discover listening patterns. Understand listener segments.
 
-*Data, Decoded — project portfolio*
+*Data, Decoded â€” project portfolio*
+
