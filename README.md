@@ -1,4 +1,4 @@
-# Data, Decoded — Analytics & Visualization
+# StreamScope — Music Listening Analytics
 
 A responsive editorial-style data analytics blog built as a **single-file NiceGUI application**. The project presents analytical case studies through descriptive statistics, hypothesis testing, clustering, visualization, and business recommendations.
 
@@ -9,15 +9,14 @@ A responsive editorial-style data analytics blog built as a **single-file NiceGU
 
 ## Live Project
 
-**Railway deployment:**  
-https://data-decoded-production.up.railway.app
+**Deployment platform:** Render Web Service. The live public URL is assigned by Render and is available in the service dashboard.
 
 **GitHub repository:**  
 https://github.com/leo-das123/data-decoded-blog
 
 ## Overview
 
-**Data, Decoded** is designed as a practical data analytics and visualization publication rather than a traditional dashboard.
+**StreamScope** is designed as a practical data analytics and visualization publication rather than a traditional dashboard.
 
 The site follows an end-to-end analytics narrative:
 
@@ -62,7 +61,7 @@ The main case study, **“Decoding the Playlist: How Data Analytics Reveals the 
   - Clustering analysis
   - Business recommendations
   - Limitations and future scope
-- Front-end acknowledgement for contact/newsletter forms
+- Email-draft contact form and front-end-only newsletter form
 - Local static image serving
 - Reduced-motion support for accessibility
 - Keyboard focus styling
@@ -258,40 +257,20 @@ The application also reads the hosting platform's `PORT` environment variable an
 
 which makes the same application suitable for hosted deployment.
 
-## Railway Deployment
+## Render Deployment
 
-The project has already been deployed successfully to Railway.
+The application is designed to run as a Render Web Service. The app reads Render's `PORT` environment variable and binds to `0.0.0.0`.
 
-The important runtime configuration in `app.py` is:
+### Configure the web service
 
-```python
-port = int(os.environ.get("PORT", "8080"))
+In the Render dashboard, create or open the Web Service connected to this repository and the `main` branch. Use:
 
-ui.run(
-    host="0.0.0.0",
-    port=port,
-    title="Data, Decoded",
-    reload=False,
-)
-```
+- **Build command:** `pip install -r requirements.txt`
+- **Start command:** `python app.py`
 
-This allows Railway to provide the runtime port through the environment.
+After a successful deployment, Render displays the public service URL in the dashboard. Use that exact URL when sharing the live project; the service URL is separate from the GitHub repository URL.
 
-### Direct deployment from a local folder
-
-Railway CLI can be used without GitHub:
-
-```powershell
-railway login
-railway init
-railway up
-```
-
-After deployment, create or configure the public domain and make sure its target port matches the port used by the running service.
-
-### GitHub-connected deployment
-
-The repository can also be connected to Railway so future pushes can trigger deployments from source control.
+If automatic deploys are enabled, a push to the configured branch triggers a new deployment. If automatic deploys are disabled, deploy the latest commit from the Render dashboard.
 
 ## Git Workflow
 
@@ -418,11 +397,9 @@ Cards use subtle hover movement and image scaling, while the article includes a 
 
 ## Forms
 
-The contact and newsletter forms are currently **front-end only**.
+The contact form opens the visitor's default email application with a message addressed to `sailee.gore23@pccoepune.org`; the visitor must press Send to deliver it. It does not send mail directly from the server.
 
-They display a success acknowledgement but do not currently send data to an email server, database, or external form service.
-
-For production use, these forms would need a backend integration.
+The newsletter form is currently front-end-only and does not store subscriptions. A backend integration or mailing-list service would be needed for persistent signups.
 
 ## Accessibility / Usability
 
@@ -497,11 +474,11 @@ Potential next improvements include:
 - Search improvements
 - SEO metadata per article
 - Automated testing
-- CI/CD through GitHub and Railway
+- CI/CD through GitHub and Render
 
 ## Author / Academic Context
 
-**Data, Decoded** is presented as a Data Analytics & Visualization coursework portfolio.
+**StreamScope** is presented as a Data Analytics & Visualization coursework portfolio.
 
 The featured **“Decoding the Playlist”** case study applies the data analytics life cycle, statistical testing, and K-Means clustering to a simulated music-streaming dataset and connects the analytical findings to plausible product and marketing decisions.
 
@@ -534,6 +511,8 @@ http://127.0.0.1:8080
 
 ---
 
-**Data, Decoded — Analytics & Visualization**
+**StreamScope — Music Listening Analytics**
 
-Turning raw data into decisions worth acting on.
+Discover listening patterns. Understand listener segments.
+
+*Data, Decoded — project portfolio*
