@@ -1,4 +1,4 @@
-﻿# StreamScope â€” Music Listening Analytics
+﻿# StreamScope  Music Listening Analytics
 
 A responsive editorial-style data analytics blog built as a **single-file NiceGUI application**. The project presents analytical case studies through descriptive statistics, hypothesis testing, clustering, visualization, and business recommendations.
 
